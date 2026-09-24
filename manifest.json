@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Distract You?",
+  "version": "1.0.0",
+  "description": "Asks why you're here before letting you scroll.",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "action":{
+    "default_popup":"options.html"
+  },
+  "content_scripts":[
+    {
+        "matches":["<all_urls>"],
+        "js":["content.js"],
+        "css": ["content.css"]
+    }
+  ]
+}
